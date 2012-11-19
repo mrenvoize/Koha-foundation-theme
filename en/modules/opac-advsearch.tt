@@ -1,0 +1,24 @@
+[% INCLUDE 'doc-head-open.inc' %]
+[% IF ( LibraryNameTitle ) %][% LibraryNameTitle %][% ELSE %]Koha online[% END %] catalog
+[% INCLUDE 'doc-head-close.inc' %]
+</head>
+<body>
+  <div id="root">
+    [% INCLUDE 'topbar.inc' %]
+    [% INCLUDE 'dropdown.inc' %]
+    [% INCLUDE 'progress.inc' %]
+    [% INCLUDE 'masthead.inc' %]
+    <!-- Start of Main Content -->
+    <div class="row">
+        <div class="twelve columns panel">
+            [% IF ( OpacMainUserBlock ) %]<div class="container">[% OpacMainUserBlock %]</div>[% END %]
+            [% IF ( OpacMainUserBlockMobile ) %]<div class="container">[% OpacMainUserBlockMobile %]</div>[% END %]
+        </div>
+    </div>
+    <!-- End of Main Content -->
+  </div>
+  <div id="footer">
+  [% INCLUDE 'mastfoot.inc' %]
+  </div>
+
+[% INCLUDE 'opac-bottom.inc' %]
